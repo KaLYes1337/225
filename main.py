@@ -10,25 +10,28 @@ def budget():
     car_total = 0
     rent_total = 0
     others_total = 0
-    print("Select category you want to deposit in (using 1,2,3,4): ")
+    print("Select category you want to deposit money into: ")
     print("Food")
     print("Car")
     print("Rent")
     print("Other")
-    user_input = input("Enter: ")
-    if user_input == "Food":
-        food_total += money_dep
-        print(food_total)
-    if user_input == "Car":
-        car_total += money_dep
-        print(car_total)
-    if user_input == "Rent":
-        rent_total += money_dep
-        print(rent_total)
-    if user_input == "Other":
-        others_total += money_dep
-        print(others_total)
-    stop=input('If you are finished enter "1" to exit: ')
-    print('If you want to check all curent balance enter "2"')
-
+    print('When you finish type "exit"')
+    
+    while True:
+        user_input = input("Enter: ").upper()
+        if user_input == "EXIT":
+            break
+        elif user_input =="FOOD":
+            food_total+=money_dep  
+            print(f"Total money spent for food: {food_total}")
+        elif user_input=="CAR":
+            car_total+=money_dep 
+            print(f"Total money spent for car: {car_total}")
+        elif user_input =="RENT":
+            rent_total_total+=money_dep  
+            print(f"Total money spent for rent: {rent_total}")
+        elif user_input=="OTHER":
+            others_total+=money_dep     
+            print(f"Total money spent for other things: {others_total}")
+    print("Have a nice day!")   
 budget()
